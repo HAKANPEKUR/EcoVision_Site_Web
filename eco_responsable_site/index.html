@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accueil - EcoVision</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!-- Styles personnalisés -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Image de fond floutée */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('assets/images/fond 6.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(5px);
+      z-index: -1;
+    }
+
+    /* Ajuster le contenu pour qu'il soit au-dessus de l'image floutée */
+    body {
+      position: relative;
+      z-index: 0;
+    }
+
+    /* Ajouter un overlay sombre pour améliorer la lisibilité */
+    .background::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); /* Effet opacité */
+      z-index: -1;
+    }
+
+    /* Section hero en haut de page */
+    .hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 1rem auto;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* Section des 4 cartes */
+    .features-section {
+      padding: 3rem 0;
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer; /* Afficher la main au survol pour montrer que c'est cliquable */
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .feature-card img {
+      height: 150px;
+      object-fit: cover;
+    }
+
+    /* Citation ou slogan en bas */
+    .slogan {
+      font-style: italic;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <!-- Image de fond floutée -->
+  <div class="background"></div>
+
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">EcoVision</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="consommation.html">Consommation</a></li>
+        <li class="nav-item"><a class="nav-link" href="capteurs.html">Capteurs</a></li>
+        <li class="nav-item"><a class="nav-link" href="economies.html">Économies</a></li>
+        <li class="nav-item"><a class="nav-link" href="configuration.html">Configuration</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Section Hero -->
+  <section class="hero">
+    <h1>Gérez votre logement grâce à EcoVision</h1>
+    <p class="hero-intro">
+      Optimisez votre quotidien, réduisez vos factures et protégez la planète grâce à nos solutions intelligentes.
+    </p>
+    <!-- Bouton Découvrir pour aller vers la page consommation.html -->
+    <a href="consommation.html" class="btn btn-success btn-lg">Découvrir</a>
+  </section>
+  
+  <!-- Section des 4 features principales -->
+  <section class="features-section container"> 
+    <div class="row text-center">
+      <!-- Carte 1 : Suivi en Temps Réel -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <!-- On enveloppe la card dans un <a> pour qu'un clic sur toute la card mène à consommation.html -->
+        <a href="consommation.html" class="text-decoration-none text-reset">
+          <div class="card feature-card h-100 shadow-sm">
+            <img src="assets/images/feature1.jpg" class="card-img-top" alt="Suivi temps réel">
+            <div class="card-body">
+              <h4 class="card-title">Suivi en Temps Réel</h4>
+              <p class="card-text">
+                Consultez les données de consommation d'électricité, d'eau et de déchets via des graphiques interactifs.
+                Surveillez vos habitudes et optimisez vos dépenses énergétiques.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Carte 2 : Capteurs & Actionneurs -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <a href="capteurs.html" class="text-decoration-none text-reset">
+          <div class="card feature-card h-100 shadow-sm">
+            <img src="assets/images/feature2.jpg" class="card-img-top" alt="Capteurs & actionneurs">
+            <div class="card-body">
+              <h4 class="card-title">Capteurs & Actionneurs</h4>
+              <p class="card-text">
+                Surveillez en direct l’état des capteurs installés. Gérez éclairage, chauffage et arrosage
+                automatique en quelques clics.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Carte 3 : Économies Réalisées -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <a href="economies.html" class="text-decoration-none text-reset">
+          <div class="card feature-card h-100 shadow-sm">
+            <img src="assets/images/feature3.jpg" class="card-img-top" alt="Économies réalisées">
+            <div class="card-body">
+              <h4 class="card-title">Économies Réalisées</h4>
+              <p class="card-text">
+                Visualisez l’impact de vos actions éco-responsables. Comparez vos factures et vos consommations 
+                pour mesurer vos progrès dans le temps.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Carte 4 : Configuration -->
+      <div class="col-md-6 col-lg-3 mb-4">
+        <a href="configuration.html" class="text-decoration-none text-reset">
+          <div class="card feature-card h-100 shadow-sm">
+            <img src="assets/images/feature4.jpg" class="card-img-top" alt="Configuration">
+            <div class="card-body">
+              <h4 class="card-title">Configuration</h4>
+              <p class="card-text">
+                Personnalisez chaque pièce et ajoutez de nouveaux capteurs/actionneurs. Adaptez votre logement 
+                à vos besoins et à votre style de vie.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section finale avec image et slogan -->
+  <section class="container mb-5">
+    <div class="row">
+      <div class="col text-center">
+        <img src="assets/images/accueil.jpg" alt="Logement éco-responsable" class="img-fluid rounded shadow">
+        <p class="mt-3 slogan">
+          "Votre maison, plus intelligente et plus verte, pour un avenir durable."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (pied de page) -->
+  <footer class="bg-dark text-light py-3 text-center">
+    <small>&copy; 2024 EcoVision - Tous droits réservés.</small>
+  </footer>
+
+  <!-- Bootstrap JS + dépendances -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Capteurs & Actionneurs - Logement Éco-responsable</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-capteurs">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">EcoVision</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent3">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent3">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="consommation.html">Consommation</a></li>
+        <li class="nav-item active"><a class="nav-link" href="capteurs.html">Capteurs</a></li>
+        <li class="nav-item"><a class="nav-link" href="economies.html">Économies</a></li>
+        <li class="nav-item"><a class="nav-link" href="configuration.html">Configuration</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1>État des Capteurs & Actionneurs</h1>
+    <p>Visualisez l’état de vos capteurs/actionneurs enregistrés dans la base.</p>
+
+    <table class="table table-striped" id="capteurs-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Type</th>
+          <th>Référence</th>
+          <th>Port</th>
+          <th>Date Insertion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rangs ajoutés dynamiquement par capteurs.js -->
+      </tbody>
+    </table>
+    <button id="refresh-btn" class="btn btn-primary">Rafraîchir</button>
+
+    <hr>
+    <div class="section-dht22">
+      <p>Le tableau ci-dessous est un exemple vous permettant de visualiser l'état de vos capteurs.</p>
+    </div>
+    <iframe
+      src="http://localhost:8002/api/sensor"
+      style="width: 100%; height: 700px; border: none;"
+      scrolling="auto">
+    </iframe>
+  </div>
+
+  <footer class="bg-dark text-light py-3 text-center mt-5">
+    <small>&copy; 2024 EcoVision - Tous droits réservés.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/capteurs.js"></script>
+</body>
+</html>

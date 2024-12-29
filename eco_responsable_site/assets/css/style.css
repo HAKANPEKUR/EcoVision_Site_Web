@@ -1,0 +1,87 @@
+/* Style de base du body */
+body {
+    background-color: #f8f9fa; /* gris très clair */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Ajuster la couleur de la navbar brand */
+  .navbar-brand {
+    font-weight: bold;
+    color: #fff !important;
+  }
+  
+  /* Titres */
+  h1, h2 {
+    color: #ffffff;
+  }
+
+  /* Titre pour les pages economies.html, consommation.html, configuration.html, et capteurs.html */
+  .page-economies h1,
+  .page-consommation h1,
+  .page-configuration h1,
+  .page-capteurs h1 {
+    color: #343A40;
+  }
+
+  /* Style pour les titres h1 de la page capteurs.html */
+  .page-capteurs h1 {
+    color: #343A40; 
+  }
+  /* Style pour le titre h2 de la section DHT22 */
+  .page-capteurs .section-dht22 h2 {
+    color: #343A40; 
+  }
+
+  /* Style pour les titres h1 et h2 de la page economies.html */
+  .page-economies h1,
+  .page-economies h2 {
+      color: #343A40; 
+  }
+
+  /* Boutons */
+  .btn-primary {
+    background-color: #1e90ff;
+    border: none;
+  }
+
+  /* Classe btn-success de bootstrep */
+  .btn-success {
+  background-color: #033a23 !important; /* Couleur du bouton */
+  border-color: #ffffff !important; /* Contour du bouton */
+  }
+
+  /* Tableau */
+  .table thead {
+    background-color: #e9ecef;
+  }
+
+  /* Style pour l'image d'accueil */
+  .img-fluid {
+    max-height: 400px; /* Hauteur maximale */
+    object-fit: cover; /* Ajuste l'image pour éviter les déformations */
+    margin: 20px 0; /* Marge en haut et en bas */
+  }
+
+    /* Texte d'introduction personnalisé */
+    .hero-intro {
+    color: #ffffff; 
+    font-size: 1.5rem; /* Taille ajustée */
+    font-weight: 500; /* Poids du texte */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre légère */
+    }
+
+    /* Style du logo */
+    .logo-image {
+    width: 40px; 
+    height: auto;
+  }
+
+  .slogan {
+    color: #ffffff !important; /* Texte blanc pour le slogan */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre légère */
+  }
+
+  
+
+
+  

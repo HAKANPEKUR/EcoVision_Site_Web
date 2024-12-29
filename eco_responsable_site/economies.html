@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Économies réalisées - Logement Éco-responsable</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Google Charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body class="page-economies">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">EcoVision</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent4">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarContent4">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="consommation.html">Consommation</a></li>
+        <li class="nav-item"><a class="nav-link" href="capteurs.html">Capteurs</a></li>
+        <li class="nav-item active"><a class="nav-link" href="economies.html">Économies</a></li>
+        <li class="nav-item"><a class="nav-link" href="configuration.html">Configuration</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h1>Économies réalisées</h1>
+    <p>
+      Comparez vos factures sur différentes périodes pour visualiser l’impact de vos actions 
+      éco-responsables. Sélectionnez ci-dessous une échelle de temps :
+    </p>
+
+    <div class="form-inline mb-3">
+      <label for="selectEchelle" class="mr-2">Échelle :</label>
+      <select id="selectEchelle" class="form-control">
+        <option value="monthly" selected>Mensuelle</option>
+        <option value="quarterly">Trimestrielle</option>
+        <option value="yearly">Annuelle</option>
+      </select>
+    </div>
+
+    <!-- Graphique comparatif -->
+    <div id="economies_chart" style="width: 100%; height: 500px;"></div>
+  </div>
+
+  <!-- Section Météo (iframe) -->
+  <div class="container mt-5">
+    <p>
+      Consultez la météo pour les prochains jours et ajustez vos dépenses (chauffage, arrosage, etc.) 
+      afin de maximiser vos économies.
+    </p>
+    <iframe 
+      src="http://localhost:8003/meteo"
+      style="width: 100%; height: 700px; border: none;"
+      scrolling="auto">
+    </iframe>
+  </div>
+
+  <footer class="bg-dark text-light py-3 text-center mt-5">
+    <small>&copy; 2024 EcoVision - Tous droits réservés.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/economies.js"></script>
+</body>
+</html>

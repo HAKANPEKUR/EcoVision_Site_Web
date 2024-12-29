@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Configuration - EcoVision</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-configuration">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">EcoVision</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="consommation.html">Consommation</a></li>
+        <li class="nav-item"><a class="nav-link" href="capteurs.html">Capteurs</a></li>
+        <li class="nav-item"><a class="nav-link" href="economies.html">Économies</a></li>
+        <li class="nav-item active"><a class="nav-link" href="configuration.html">Configuration</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <h1>Configuration Générale</h1>
+    <p>
+      Ici, vous pouvez ajouter / configurer vos logements et capteurs / actionneurs. 
+    </p>
+
+    <!-- Section LOGEMENT -->
+    <div class="card my-4">
+      <div class="card-header">Ajouter un Logement</div>
+      <div class="card-body">
+        <form id="form-logement" class="form-inline mb-3">
+          <input type="text" class="form-control mr-2 mb-2" id="adresse" placeholder="Adresse" required>
+          <input type="text" class="form-control mr-2 mb-2" id="telephone" placeholder="Téléphone">
+          <input type="text" class="form-control mr-2 mb-2" id="ip" placeholder="Adresse IP">
+          <button type="submit" class="btn btn-success mb-2">Ajouter</button>
+        </form>
+        <table class="table table-bordered" id="table-logements">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Adresse</th>
+              <th>Téléphone</th>
+              <th>IP</th>
+              <th>Actions</th> <!-- Nouvelle colonne pour les actions -->
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Logements insérés dynamiquement -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section CAPTEUR/ACTIONNEUR -->
+    <div class="card my-4">
+      <div class="card-header">Ajouter un Capteur/Actionneur</div>
+      <div class="card-body">
+        <form id="form-capteur" class="form-inline mb-3">
+          <input type="text" class="form-control mr-2 mb-2" id="typeCapteur" placeholder="Type (Température, etc.)" required>
+          <input type="text" class="form-control mr-2 mb-2" id="refCapteur" placeholder="Référence commerciale" required>
+          <input type="text" class="form-control mr-2 mb-2" id="portCapteur" placeholder="Port (WiFi, Zigbee...)" required>
+          <button type="submit" class="btn btn-success mb-2">Ajouter</button>
+        </form>
+        <table class="table table-bordered" id="table-capteurs">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Type</th>
+              <th>Référence</th>
+              <th>Port</th>
+              <th>Actions</th> <!-- Nouvelle colonne pour les actions -->
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Capteurs insérés dynamiquement -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light py-3 text-center mt-5">
+    <small>&copy; 2024 EcoVision - Tous droits réservés.</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/configuration.js"></script>
+</body>
+</html>
